@@ -6,7 +6,6 @@ import {
    Toolbar,
    IconButton,
    Collapse,
-   Button,
 } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -22,37 +21,53 @@ const FollowBox = styled(Box)({
    borderRadius: "100px",
    border: "1px solid",
    overflow: "hidden",
+   "&:hover": {
+      backgroundColor: "#fff",
+   },
 });
 
 const HoverIconButton = styled(IconButton)({
    cursor: "pointer",
-   "&:hover": {
-      backgroundColor: "#000",
-   },
+   color: "#212121",
 });
 
 const MenuBox = styled(Box)({
    margin: 12,
+   border: "1px solid transparent",
+   "&:hover": {
+      backgroundColor: "#FFF",
+      cursor: "pointer",
+      borderRadius: "100px",
+      border: "1px solid",
+   },
 });
+
+const MenuText = styled(Typography)({
+   padding: "5px",
+   "&:hover": {
+      color: "#212121",
+   },
+});
+
 const SocialIcons = () => (
    <>
       <HoverIconButton
          href="https://www.facebook.com/SpartanRacingSJSU"
          target="_blank"
          rel="noopener noreferrer">
-         <FacebookIcon sx={{ color: "white" }} />
+         <FacebookIcon sx={{ color: "#212121" }} />
       </HoverIconButton>
       <HoverIconButton
          href="https://www.instagram.com/sjsuformulasae/"
          target="_blank"
          rel="noopener noreferrer">
-         <InstagramIcon sx={{ color: "white" }} />
+         <InstagramIcon sx={{ color: "#212121" }} />
       </HoverIconButton>
       <HoverIconButton
          href="https://www.linkedin.com/school/sjsufsae/"
          target="_blank"
          rel="noopener noreferrer">
-         <LinkedInIcon sx={{ color: "white" }} />
+         <LinkedInIcon sx={{ color: "#212121" }} />
       </HoverIconButton>
    </>
 );
@@ -80,30 +95,29 @@ function Navbar() {
                   }}>
                   SPARTAN RACING
                </Typography>
-
                <Box
                   sx={{
                      display: "flex",
-                     flexGrow: 6,
-                     justifyContent: "flex-end",
+                     justifyContent: "space-evenly",
+                     alignItems: "center",
                   }}>
                   <MenuBox>
-                     <Typography variant="h6">About</Typography>
+                     <MenuText variant="h6">About</MenuText>
                   </MenuBox>
                   <MenuBox>
-                     <Typography variant="h6">The Team</Typography>
+                     <MenuText variant="h6">The Team</MenuText>
                   </MenuBox>
                   <MenuBox>
-                     <Typography variant="h6">Our Cars</Typography>
+                     <MenuText variant="h6">Our Cars</MenuText>
                   </MenuBox>
                   <MenuBox>
-                     <Typography variant="h6">Sponsors</Typography>
+                     <MenuText variant="h6">Sponsors</MenuText>
                   </MenuBox>
                   <MenuBox>
-                     <Typography variant="h6">Gallery</Typography>
+                     <MenuText variant="h6">Gallery</MenuText>
                   </MenuBox>
                   <MenuBox>
-                     <Typography variant="h6">Contact Us</Typography>
+                     <MenuText variant="h6">Contact Us</MenuText>
                   </MenuBox>
                </Box>
 
