@@ -12,6 +12,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { styled } from "@mui/material/styles";
 import logo from "../assets/logo.png";
+import "./navbar.css";
 
 const FollowBox = styled(Box)({
    display: "grid",
@@ -35,17 +36,7 @@ const MenuBox = styled(Box)({
    margin: 12,
    border: "1px solid transparent",
    "&:hover": {
-      backgroundColor: "#FFF",
       cursor: "pointer",
-      borderRadius: "100px",
-      border: "1px solid",
-   },
-});
-
-const MenuText = styled(Typography)({
-   padding: "5px",
-   "&:hover": {
-      color: "#212121",
    },
 });
 
@@ -102,22 +93,22 @@ function Navbar() {
                      alignItems: "center",
                   }}>
                   <MenuBox>
-                     <MenuText variant="h6">About</MenuText>
+                     <p className="item">About</p>
                   </MenuBox>
                   <MenuBox>
-                     <MenuText variant="h6">The Team</MenuText>
+                     <p className="item">The Team</p>
                   </MenuBox>
                   <MenuBox>
-                     <MenuText variant="h6">Our Cars</MenuText>
+                     <p className="item">Our Cars</p>
                   </MenuBox>
                   <MenuBox>
-                     <MenuText variant="h6">Sponsors</MenuText>
+                     <p className="item">Sponsors</p>
                   </MenuBox>
                   <MenuBox>
-                     <MenuText variant="h6">Gallery</MenuText>
+                     <p className="item">Gallery</p>
                   </MenuBox>
                   <MenuBox>
-                     <MenuText variant="h6">Contact Us</MenuText>
+                     <p className="item">Contact Us</p>
                   </MenuBox>
                </Box>
 
