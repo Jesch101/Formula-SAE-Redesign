@@ -11,6 +11,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { styled } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "./navbar.css";
 
@@ -71,21 +72,30 @@ function Navbar() {
          <AppBar position="static" sx={{ backgroundColor: "#212121" }}>
             <Toolbar disableGutters>
                <IconButton sx={{ mr: 2, ml: 2 }}>
-                  <img
-                     src={logo}
-                     style={{ width: "140px", height: "auto" }}
-                     alt="logo"
-                  />
+                  <Link to="/">
+                     <img
+                        src={logo}
+                        style={{ width: "140px", height: "auto" }}
+                        alt="logo"
+                     />
+                  </Link>
                </IconButton>
-               <Typography
-                  variant="h3"
-                  sx={{
-                     fontWeight: "bold",
-                     fontStyle: "italic",
-                     flexGrow: 1,
-                  }}>
-                  SPARTAN RACING
-               </Typography>
+
+               <Box sx={{ flexGrow: 1 }}>
+                  <Link
+                     to="/"
+                     style={{ textDecoration: "none", color: "inherit" }}>
+                     <Typography
+                        variant="h3"
+                        sx={{
+                           fontWeight: "bold",
+                           fontStyle: "italic",
+                        }}>
+                        SPARTAN RACING
+                     </Typography>
+                  </Link>
+               </Box>
+
                <Box
                   sx={{
                      display: "flex",
@@ -93,7 +103,9 @@ function Navbar() {
                      alignItems: "center",
                   }}>
                   <MenuBox>
-                     <p className="item">About</p>
+                     <Link to="/about">
+                        <p className="item">About</p>
+                     </Link>
                   </MenuBox>
                   <MenuBox>
                      <p className="item">The Team</p>

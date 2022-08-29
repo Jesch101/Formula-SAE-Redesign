@@ -1,0 +1,9 @@
+.about {
+   background-image: url("../../assets/laguna2.jpg");
+   width: 100vw;
+   height: 100vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position-y: center;
+}
